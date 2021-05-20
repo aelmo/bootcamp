@@ -1,4 +1,4 @@
-package exercicios.lista.util;
+package exercicios.util;
 
 public class PrintUtil {
     public static void print(String text) {

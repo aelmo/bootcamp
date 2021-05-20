@@ -1,11 +1,9 @@
 package exercicios.lista;
 
-import exercicios.lista.util.ValidationsUtil;
-
 import java.util.Scanner;
 
-import static exercicios.lista.util.PrintUtil.print;
-import static exercicios.lista.util.ValidationsUtil.isNumeroPrimo;
+import static exercicios.util.PrintUtil.print;
+import static exercicios.util.ValidationsUtil.isNumeroPrimo;
 
 public class Exercicio04 {
     public static void main(String[] args) {

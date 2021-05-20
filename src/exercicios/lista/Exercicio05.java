@@ -1,9 +1,8 @@
 package exercicios.lista;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-import static exercicios.lista.util.PrintUtil.print;
+import static exercicios.util.PrintUtil.print;
 
 public class Exercicio05 {
     public static void main(String[] args) {
