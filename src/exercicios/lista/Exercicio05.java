@@ -23,12 +23,12 @@ public class Exercicio05 {
         while (i < n) {
             String[] numberTransformed = String.valueOf(j).split("");
 
-            if(numberTransformed.length < m) {
+            if (numberTransformed.length < m) {
                 j++;
                 continue;
             }
 
-            if(getOcurrenciesOnArray(numberTransformed, d) < m) {
+            if (getOcurrenciesOnArray(numberTransformed, d) < m) {
                 j++;
                 continue;
             }
@@ -38,7 +38,6 @@ public class Exercicio05 {
             j++;
             i++;
         }
-
     }
 
     public static int getOcurrenciesOnArray(String[] arr, int valueToCompare) {

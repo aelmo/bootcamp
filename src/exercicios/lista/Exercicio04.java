@@ -7,21 +7,21 @@ import static exercicios.util.ValidationsUtil.isNumeroPrimo;
 
 public class Exercicio04 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        print("Digite a quantidade de números primos desejada:");
-        int n = sc.nextInt();
+        print("Digite a quantidade de números primos desejada: ");
+        int n = scanner.nextInt();
         int primos = 0;
         int i = 0;
 
-        while (primos<n){
+        while (primos < n) {
             if (isNumeroPrimo(i)) {
                 primos++;
                 print(i);
             }
             i++;
         }
-        sc.close();
 
+        scanner.close();
     }
 }
