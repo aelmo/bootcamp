@@ -1,5 +1,7 @@
 package exercicios.lista;
 
+import exercicios.lista.util.ValidationsUtil;
+
 import java.util.Scanner;
 
 public class Exercicio04 {
@@ -12,7 +14,7 @@ public class Exercicio04 {
         int i = 0;
 
         while (primos<n){
-            if (isNumeroPrimo(i)) {
+            if (ValidationsUtil.isNumeroPrimo(i)) {
                 primos++;
                 System.out.println(i);
             }
@@ -20,21 +22,5 @@ public class Exercicio04 {
         }
         sc.close();
 
-    }
-    private static boolean isNumeroPrimo(final int numero) {
-        if (numero <= 1)
-            return false;
-
-        else if (numero == 2)
-            return true;
-
-        else if (numero % 2 == 0)
-            return false;
-
-        for (int i = 3; i <= Math.sqrt(numero); i += 2)
-            if (numero % i == 0)
-                return false;
-
-        return true;
     }
 }
