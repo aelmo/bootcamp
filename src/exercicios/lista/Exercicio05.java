@@ -3,12 +3,17 @@ package exercicios.lista;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static exercicios.lista.util.PrintUtil.print;
+
 public class Exercicio05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        print("digite o primeiro numero");
         int n = scanner.nextInt();
+        print("digite o segundo numero");
         int m = scanner.nextInt();
+        print("digite o terceiro numero");
         int d = scanner.nextInt();
 
         scanner.close();
@@ -29,7 +34,7 @@ public class Exercicio05 {
                 continue;
             }
 
-            System.out.println(j);
+            print(j);
 
             j++;
             i++;

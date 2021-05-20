@@ -1,18 +1,22 @@
 package exercicios.lista;
 
-import exercicios.lista.util.ValidationsUtil;
-
 import java.util.Scanner;
+
+import static exercicios.lista.util.PrintUtil.print;
+import static exercicios.lista.util.ValidationsUtil.isNumeroPrimo;
 
 public class Exercicio03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite um número para a verificação: ");
+        print("Digite um número para a verificação: ");
         int numero = scanner.nextInt();
 
-        if (ValidationsUtil.isNumeroPrimo(numero))
-            System.out.println("Número é primo!");
+        if (isNumeroPrimo(numero)) {
+            print("Número é primo!");
+        } else {
+            print("Número não é primo!");
+        }
 
         scanner.close();
     }
