@@ -3,6 +3,7 @@ package exercicios.lista02;
 import java.util.ArrayList;
 
 public class Exercicio04 {
+    /* Needs to be fixed
     public static void radixSort(int iArr[]) {
         String[] strArray = new String[iArr.length];
 
@@ -273,4 +274,5 @@ public class Exercicio04 {
     public static String getNLastChar(String text, int n) {
         return String.valueOf(text.charAt(text.length() - n));
     }
+    */
 }
