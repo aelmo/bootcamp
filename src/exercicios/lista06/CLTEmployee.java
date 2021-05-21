@@ -22,7 +22,7 @@ public class CLTEmployee extends Employee {
         }
 
         if(this.role == RolesEnum.DIRECTOR) {
-            return 15000 * 0.03*bonus;
+            return 15000 + 0.03*bonus;
         }
 
         return 0.0;
