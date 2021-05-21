@@ -1,4 +1,4 @@
-package exercicios.lista03.terceiroExercicio;
+package exercicios.lista04.segundoExercicio;
 
 public class Book {
 

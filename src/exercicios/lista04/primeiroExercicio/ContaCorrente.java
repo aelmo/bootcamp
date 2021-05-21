@@ -1,4 +1,4 @@
-package exercicios.lista03.segundoExercicio;
+package exercicios.lista04.primeiroExercicio;
 
 public class ContaCorrente {
 
