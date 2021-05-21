@@ -273,5 +273,4 @@ public class Exercicio04 {
     public static String getNLastChar(String text, int n) {
         return String.valueOf(text.charAt(text.length() - n));
     }
-
 }
