@@ -9,10 +9,8 @@ public class Password {
     }
 
     public void setPwd(String pwd) {
-        try {
-            pwd.matches(this.regex);
-        } catch(SecurityException e) {
-            throw e;
+        if(!pwd.matches(this.regex)) {
+            throw new SecurityException();
         }
     }
 }

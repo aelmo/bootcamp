@@ -1,7 +1,7 @@
 package exercicios.lista05.exercicio1;
 
 public class StrongPassword extends Password{
-    public StrongPassword(String regex) {
-        super(regex);
+    public StrongPassword() {
+        super("^(?=.*[a-z])(?=.*[A-Z])(?=.*)[a-zA-Z]{8,}$");
     }
 }
