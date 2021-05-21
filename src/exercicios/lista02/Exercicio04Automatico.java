@@ -84,7 +84,6 @@ public class Exercicio04Automatico {
         List<String> L9 = new ArrayList<>();
         for(String elem : list){
             String lastDigit = getNLastChar(elem,digit);
-            System.out.println(lastDigit);
             if(lastDigit.equals("0"))
                 L0.add(elem);
             if(lastDigit.equals("1"))
