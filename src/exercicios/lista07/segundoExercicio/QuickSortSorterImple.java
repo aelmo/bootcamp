@@ -1,37 +1,58 @@
 package exercicios.lista07.segundoExercicio;
 
-import java.util.Comparator;
+public class QuickSortSorterImple<T extends Comparable<? super T>> {
+    public static void main(String[] args)
+    {
+        // example using Strings
+        String[]                     arrayOfStrings = {"Andree", "Leana", "Faviola", "Loyce", "Quincy", "Milo", "Jamila", "Toccara", "Nelda", "Blair", "Ernestine", "Chara", "Kareen", "Monty", "Rene", "Cami", "Winifred", "Tara", "Demetrice", "Azucena"};
+        QuickSortSorterImple<String> stringSorter   = new QuickSortSorterImple<>();
+        stringSorter.quicksort(arrayOfStrings, 0, arrayOfStrings.length - 1);
+        System.out.println(java.util.Arrays.toString(arrayOfStrings));
 
-public class QuickSortSorterImple implements Sorter<QuickSortSorterImple> {
+        // example using Doubles
+        Double[]                     arrayOfDoubles = {0.35, 0.02, 0.36, 0.82, 0.27, 0.49, 0.41, 0.17, 0.30, 0.89, 0.37, 0.66, 0.82, 0.17, 0.20, 0.96, 0.18, 0.25, 0.37, 0.52};
+        QuickSortSorterImple<Double> doubleSorter   = new QuickSortSorterImple<>();
+        doubleSorter.quicksort(arrayOfDoubles, 0, arrayOfDoubles.length - 1);
+        System.out.println(java.util.Arrays.toString(arrayOfDoubles));
+    }
 
-    @Override
-    public void sort(QuickSortSorterImple[] arr, Comparator<QuickSortSorterImple> c) {
-        if (low < high) {
-            int pi = partition(arr, low, high);
-
-            sort(arr, low, pi - 1);
-            sort(arr, pi + 1, high);
+    private void quicksort(T[] array, int startIndex, int endIndex)
+    {
+        // verify that the start and end index have not overlapped
+        if (startIndex < endIndex)
+        {
+            // calculate the pivotIndex
+            int pivotIndex = partition(array, startIndex, endIndex);
+            // sort the left sub-array
+            quicksort(array, startIndex, pivotIndex);
+            // sort the right sub-array
+            quicksort(array, pivotIndex + 1, endIndex);
         }
     }
 
-    static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
+    private int partition(T[] array, int startIndex, int endIndex)
+    {
+        int pivotIndex = (startIndex + endIndex) / 2;
+        T pivotValue = array[pivotIndex];
+        startIndex--;
+        endIndex++;
 
-    static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
+        while (true)
+        {
+            // start at the FIRST index of the sub-array and increment
+            // FORWARD until we find a value that is > pivotValue
+            do startIndex++; while (array[startIndex].compareTo(pivotValue) < 0) ;
 
-        int i = (low - 1);
+            // start at the LAST index of the sub-array and increment
+            // BACKWARD until we find a value that is < pivotValue
+            do endIndex--; while (array[endIndex].compareTo(pivotValue) > 0) ;
 
-        for (int j = low; j <= high - 1; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                swap(arr, i, j);
-            }
+            if (startIndex >= endIndex) return endIndex;
+
+            // swap values at the startIndex and endIndex
+            T temp = array[startIndex];
+            array[startIndex] = array[endIndex];
+            array[endIndex] = temp;
         }
-        swap(arr, i + 1, high);
-        return (i + 1);
     }
 }
