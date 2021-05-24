@@ -3,12 +3,18 @@ package exercicios.lista07.segundoExercicio;
 import java.util.Date;
 
 public class Timer {
+    long start;
+    long end;
 
-    public Date start() {
-
+    public void start() {
+        this.start = new Date().getTime();
     }
 
-    public Date stop() {
+    public void stop() {
+        this.end = new Date().getTime();
+    }
 
+    public long elapsedTime() {
+        return this.end - this.start;
     }
 }
