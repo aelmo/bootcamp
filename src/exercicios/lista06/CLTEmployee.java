@@ -3,7 +3,8 @@ package exercicios.lista06;
 public class CLTEmployee extends Employee {
     RolesEnum role;
 
-    public CLTEmployee(RolesEnum role) {
+    public CLTEmployee(String name, RolesEnum role) {
+        super(name);
         this.role = role;
     }
 
