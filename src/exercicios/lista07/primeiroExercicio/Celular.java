@@ -1,4 +1,4 @@
-package exercicios.lista07;
+package exercicios.lista07.primeiroExercicio;
 
 public class Celular implements Precedente<Celular> {
 

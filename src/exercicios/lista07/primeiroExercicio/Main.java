@@ -1,4 +1,4 @@
-package exercicios.lista07;
+package exercicios.lista07.primeiroExercicio;
 
 import java.util.Arrays;
 
