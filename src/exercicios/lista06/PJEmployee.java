@@ -4,7 +4,8 @@ public class PJEmployee extends Employee{
     int workedHours;
     double salaryPerHour;
 
-    public PJEmployee(int workedHours, double salaryPerHour) {
+    public PJEmployee(String name, int workedHours, double salaryPerHour) {
+        super(name);
         this.workedHours = workedHours;
         this.salaryPerHour = salaryPerHour;
     }

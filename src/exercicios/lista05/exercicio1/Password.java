@@ -12,5 +12,11 @@ public class Password {
         if(!pwd.matches(this.regex)) {
             throw new SecurityException();
         }
+
+        this.pwd = pwd;
+    }
+
+    public String getPwd() {
+        return pwd;
     }
 }
