@@ -6,6 +6,7 @@ import java.util.List;
 public class Evento {
     private List<Convidados> listaDeConvidados = new ArrayList<>();
     private List<PacoteFogos> listaDePacotesDeFogos = new ArrayList<>();
+    private String enterpriseName;
 
     public void distribuirBolo(){
         System.out.println("Distribuindo bolos");
@@ -31,8 +32,9 @@ public class Evento {
         this.listaDePacotesDeFogos.add(pacote);
     }
 
-    public Evento(List<Convidados> listaDeConvidados, List<PacoteFogos> listaDePacotesDeFogos) {
+    public Evento(String name,List<Convidados> listaDeConvidados, List<PacoteFogos> listaDePacotesDeFogos) {
         this.listaDeConvidados = listaDeConvidados;
         this.listaDePacotesDeFogos = listaDePacotesDeFogos;
+        this.enterpriseName = name;
     }
 }

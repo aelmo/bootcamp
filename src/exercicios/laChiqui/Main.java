@@ -21,7 +21,7 @@ public class Main {
 
         List<PacoteFogos> listaDePacotesDeFogos = new ArrayList<>();
 
-        Evento evento = new Evento(listaDeConvidados, listaDePacotesDeFogos);
+        Evento evento = new Evento("Marte Group S.A.",listaDeConvidados, listaDePacotesDeFogos);
         evento.addFogos(primeiroFogo);
         evento.addFogos(pacoteDeFogos);
         evento.distribuirBolo();
