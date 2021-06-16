@@ -1,0 +1,24 @@
+Sobre normalização:
+
+Normalização é o processo de modelar o banco de dados sem redundâncias.
+Exitem 4 niveis de normalizacao:
+
+1 nível - não admitir repetições ou campos que tenham mais que um valor.
+2 nível - todos os campos de uma tabela dependem da chave primária em sua totalidade. Previne que haja redundância no banco de dados.
+3 nível - se analisarmos uma tupla e não encontrarmos um atributo não chave dependente de outro atributo não chave, estaremos no 3 nivel
+4 nível - não existir dependências multivaloradas entre seus atributos
+
+Só atingiremos um determinado nível ao respeitarmos o respectivo nível anterior.
+
+Sobre indíces:
+Um índice de banco de dados é uma estrutura de dados que melhora a velocidade das operações de
+recuperação de dados em uma tabela de banco de dados ao custo de gravações adicionais e espaço de armazenamento para manter
+a estrutura de dados do índice. Os índices são usados para localizar dados rapidamente sem ter que pesquisar
+cada linha em uma tabela de banco de dados sempre que uma tabela de banco de dados é acessada.
+Os índices podem ser criados usando uma ou mais colunas de uma tabela de banco de dados,
+fornecendo a base para pesquisas aleatórias rápidas e acesso eficiente de registros ordenados.
+
+
+
+
+
